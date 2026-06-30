@@ -1,0 +1,295 @@
+/* ── Root layout ─────────────────────────────────────────────────────────── */
+.landing-root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1a4e 50%, #24243e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 24px;
+}
+
+/* ── Animated background blobs ───────────────────────────────────────────── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  animation: float 10s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #4f6ef7, #6c3cf7);
+  top: -150px;
+  left: -100px;
+  animation-duration: 12s;
+}
+
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #f76ec8, #9b59b6);
+  bottom: -100px;
+  right: -80px;
+  animation-duration: 9s;
+  animation-delay: -3s;
+}
+
+.blob-3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #43e97b, #38f9d7);
+  bottom: 100px;
+  left: 30%;
+  animation-duration: 15s;
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  33%       { transform: translateY(-30px) scale(1.05); }
+  66%       { transform: translateY(15px) scale(0.97); }
+}
+
+/* ── Two-column container ────────────────────────────────────────────────── */
+.landing-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  max-width: 960px;
+  width: 100%;
+  align-items: center;
+}
+
+/* ── Left — Hero / Branding ─────────────────────────────────────────────── */
+.landing-hero {
+  color: #fff;
+}
+
+.landing-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #4f6ef7, #a78bfa);
+  border-radius: 18px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 32px rgba(79, 110, 247, 0.4);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 8px 32px rgba(79, 110, 247, 0.4); }
+  50%       { box-shadow: 0 8px 48px rgba(79, 110, 247, 0.7); }
+}
+
+.landing-logo-icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.landing-headline {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.landing-headline-accent {
+  background: linear-gradient(90deg, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.landing-tagline {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 36px;
+  max-width: 380px;
+}
+
+.landing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.landing-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.feat-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* ── Right — Login card ──────────────────────────────────────────────────── */
+.landing-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 44px 40px;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+  animation: card-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.landing-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.landing-card-logo {
+  font-size: 22px;
+  background: linear-gradient(135deg, #4f6ef7, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.landing-card-brand {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.02em;
+}
+
+.landing-card-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.landing-card-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+/* ── Error banner ────────────────────────────────────────────────────────── */
+.landing-error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  font-size: 13px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* ── CTA Button ──────────────────────────────────────────────────────────── */
+.landing-btn {
+  width: 100%;
+  padding: 15px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #fff;
+  background: linear-gradient(135deg, #4f6ef7 0%, #7c3aed 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  box-shadow: 0 4px 20px rgba(79, 110, 247, 0.45);
+  margin-bottom: 20px;
+}
+
+.landing-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(79, 110, 247, 0.6);
+  filter: brightness(1.08);
+}
+
+.landing-btn:active {
+  transform: translateY(0);
+}
+
+.landing-btn-icon {
+  font-size: 18px;
+}
+
+/* ── Footer note ─────────────────────────────────────────────────────────── */
+.landing-card-note {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.landing-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 20px;
+}
+
+.landing-powered {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.landing-powered strong {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .landing-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .landing-hero {
+    text-align: center;
+  }
+
+  .landing-logo-wrap {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .landing-tagline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .landing-features {
+    align-items: center;
+  }
+
+  .landing-card {
+    padding: 32px 24px;
+  }
+}

@@ -1,0 +1,104 @@
+.sessions-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sessions-header {
+  margin-bottom: 8px;
+}
+
+.sessions-subtitle {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.session-card {
+  padding: 24px;
+}
+
+.session-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.session-device-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.session-logout-btn {
+  padding: 4px 12px;
+  font-size: 13px;
+}
+
+.session-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.session-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.session-ip {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.session-dot {
+  font-size: 10px;
+}
+
+.session-clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.client-badge {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.logout-info-card {
+  margin-top: 16px;
+  background: #f9fafb;
+}
+
+.logout-info-card h3 {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+}
+
+.logout-info-card p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mt-3 {
+  margin-top: 16px;
+}

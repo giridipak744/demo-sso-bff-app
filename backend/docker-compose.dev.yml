@@ -1,0 +1,18 @@
+# Development override — use alongside the base compose file:
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+#
+# What this adds on top of docker-compose.yml:
+#  - Builds the "development" Dockerfile stage (all deps + nodemon)
+#  - Bind-mounts ./src into the container so nodemon picks up every save
+#  - node_modules lives inside the container image, never on the host
+
+services:
+  backend:
+    build:
+      context: .
+      target: development
+    volumes:
+      # Source changes on host are instantly visible inside the container
+      - ./src:/app/src
+      # Keep node_modules from the image; don't let the host override it
+      - /app/node_modules

@@ -1,0 +1,70 @@
+.dashboard-header {
+  margin-bottom: 28px;
+}
+
+.dashboard-greeting {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.dashboard-subtitle {
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.dashboard-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.dashboard-card-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.dashboard-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.dashboard-card p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.session-test-card {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.session-test-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.session-test-card p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.session-status {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.session-alive { color: #16a34a; }
+.session-dead  { color: #dc2626; }

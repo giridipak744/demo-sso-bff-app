@@ -1,0 +1,126 @@
+.logged-out-root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1a4e 50%, #24243e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 24px;
+}
+
+.lo-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
+  animation: lo-float 10s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.lo-blob-1 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #4f6ef7, #6c3cf7);
+  top: -100px;
+  right: -80px;
+}
+
+.lo-blob-2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #43e97b, #38f9d7);
+  bottom: -80px;
+  left: -60px;
+  animation-duration: 13s;
+  animation-delay: -5s;
+}
+
+@keyframes lo-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-25px) scale(1.04); }
+}
+
+.logged-out-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 52px 44px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+  animation: lo-card-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes lo-card-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.lo-icon-wrap {
+  width: 72px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.lo-icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.lo-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.lo-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.lo-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #4f6ef7, #7c3aed);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(79, 110, 247, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  margin-bottom: 24px;
+}
+
+.lo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(79, 110, 247, 0.6);
+  filter: brightness(1.08);
+  text-decoration: none;
+  color: #fff;
+}
+
+.lo-powered {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.lo-powered strong {
+  color: rgba(255, 255, 255, 0.45);
+}

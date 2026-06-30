@@ -1,0 +1,128 @@
+.security-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.security-header {
+  margin-bottom: 8px;
+}
+
+.security-subtitle {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.security-section {
+  padding: 32px;
+}
+
+.security-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.security-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.count-badge {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.security-section-desc {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 600px;
+}
+
+.credential-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.credential-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.credential-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.credential-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.credential-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.credential-date {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.credential-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-text {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-primary);
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn-text:hover {
+  text-decoration: underline;
+  transform: none;
+}
+
+.text-danger {
+  color: var(--color-danger);
+}
+
+.empty-cred {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  padding: 8px 0;
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .security-section-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
